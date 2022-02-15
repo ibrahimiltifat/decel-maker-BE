@@ -8,9 +8,11 @@ from flask_cors import CORS,cross_origin
 
 app=Flask(__name__)
 
-CORS(app,support_credentials=True)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route("/") 
+@app.route("/")
+@cross_origin() 
 def test():
     return jsonify(input)   
 
@@ -29,7 +31,6 @@ def test():
 
 @app.route('/username', methods = ['GET','POST'])
 def members():
-    @cross_origin(supports_credentials=True)
     def isSubsetSum(sset, n, ssum):
 
         # Base Cases
