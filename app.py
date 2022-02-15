@@ -11,7 +11,8 @@ CORS(app)
 
 
 @app.route('/')
-    return {"a":["a"]}
+    return jsonify({"work"})
+
 @app.route('/users', methods = ['GET','POST'])
 def members():
     def isSubsetSum(sset, n, ssum):
