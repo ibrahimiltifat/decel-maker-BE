@@ -11,7 +11,9 @@ CORS(app)
 
 
 @app.route('/')
-    return jsonify({"work"})
+def main():
+    a=[1,1]
+    return jsonify(a)
 
 @app.route('/users', methods = ['GET','POST'])
 def members():
