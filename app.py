@@ -10,7 +10,9 @@ app=Flask(__name__)
 CORS(app)
 
 
-@app.route('/', methods = ['GET','POST'])
+@app.route('/')
+    return {"a":["a"]}
+@app.route('/users', methods = ['GET','POST'])
 def members():
     def isSubsetSum(sset, n, ssum):
 
