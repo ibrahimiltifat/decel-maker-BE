@@ -8,7 +8,7 @@ from flask_cors import CORS,cross_origin
 
 app=Flask(__name__)
 
-CORS(app)
+CORS(app),support_credentials=True)
 
 @app.route("/") 
 def test():
@@ -29,7 +29,7 @@ def test():
 
 @app.route('/username', methods = ['GET','POST'])
 def members():
-    @cross_origin()
+    @cross_origin(supports_credentials=True)
     def isSubsetSum(sset, n, ssum):
 
         # Base Cases
