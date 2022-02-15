@@ -4,7 +4,7 @@ from ortools.linear_solver import pywraplp
 import json
 from flask import request
 from flask import jsonify
-from flask_cors import CORS
+from flask_cors import CORS,cross_origin
 
 app=Flask(__name__)
 
@@ -29,6 +29,7 @@ def test():
 
 @app.route('/username', methods = ['GET','POST'])
 def members():
+    @cross_origin()
     def isSubsetSum(sset, n, ssum):
 
         # Base Cases
