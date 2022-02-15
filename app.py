@@ -7,7 +7,7 @@ from flask import jsonify
 from flask_cors import CORS,cross_origin
 
 app=Flask(__name__)
-cors = CORS(app, resources={r"*": {"origins": "*"}})
+CORS(app)
 
 
 @app.route('/', methods = ['GET','POST'])
