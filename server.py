@@ -11,11 +11,6 @@ app=Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-@app.route("/")
-@cross_origin() 
-def test():
-    return jsonify(input)   
-
 # @app.route("/username", methods=['POST'])
 # def login():
 #     input = json.loads(request.data) # or request.form["username"]
@@ -29,7 +24,7 @@ def test():
 #         test=[1,2,3]
 #         return jsonify(arr)
 
-@app.route('/username', methods = ['GET','POST'])
+@app.route('/', methods = ['GET','POST'])
 def members():
     def isSubsetSum(sset, n, ssum):
 
