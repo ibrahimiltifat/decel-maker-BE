@@ -7,13 +7,10 @@ from flask import jsonify
 from flask_cors import CORS,cross_origin
 
 app=Flask(__name__)
-
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app)
 
 
 @app.route('/', methods = ['GET','POST'])
-@cross_origin()
 def members():
     def isSubsetSum(sset, n, ssum):
 
