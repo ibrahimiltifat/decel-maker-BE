@@ -1,10 +1,9 @@
 from flask import Flask
-from flask import Response
 from ortools.linear_solver import pywraplp
 import json
 from flask import request
 from flask import jsonify
-from flask_cors import CORS,cross_origin
+from flask_cors import CORS
 
 app=Flask(__name__)
 CORS(app)
@@ -132,6 +131,7 @@ def members():
 
     # print(bins)
     return jsonify(bins)
+
 
 if __name__=="__main__":
     app.run(debug=True)
