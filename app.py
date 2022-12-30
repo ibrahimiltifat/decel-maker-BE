@@ -3,7 +3,7 @@ from ortools.linear_solver import pywraplp
 import json
 from flask import request
 from flask import jsonify
-from flask_cors import CORS
+from flask_cors import CORS,cors_origin
 
 app=Flask(__name__)
 CORS(app)
